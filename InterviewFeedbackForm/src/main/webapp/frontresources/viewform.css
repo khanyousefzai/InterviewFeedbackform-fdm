@@ -1,0 +1,57 @@
+.main_container{
+  width:60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: calc(100% - 225px);
+  padding-bottom: 75px;
+}
+
+.viewform_container{
+  height: 100%;
+  background: white;
+  overflow: scroll;
+}
+.viewform_container::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.field_label{
+  font-weight: 700;
+  margin:3px 0;
+}
+
+.separator{
+  margin:20px 10%;
+  padding: 2px 5px;
+  overflow-x: none;
+}
+
+.questionApproval{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  height: 30px;
+}
+
+.likes{
+  width: 150px;
+  margin:5px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+}
+
+.numbers{
+  width: 50%;
+  display: inline;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.sameLineForm{
+	float: left;
+	margin-left:1%;
+	margin-top:5px;
+	margin-bottom:5px; 
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href=".\frontresources\fdm.png" />
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<link rel="stylesheet" href=".\frontresources\common.css" />
+<link rel="stylesheet" href=".\frontresources\home.css" />
+<script type="text/javascript">
+	function changeTabQuestion(){
+		let form = document.getElementById("formTab");
+		let question = document.getElementById("questionTab");
+
+		form.classList.remove('background');
+		form.classList.add('backgroundGrey');
+
+		question.classList.remove('backgroundGrey');
+		question.classList.add('background');
+	}
+
+	function changeTabForm(){
+		let form = document.getElementById("formTab");
+		let question = document.getElementById("questionTab");
+
+
+		question.classList.remove('background');
+		question.classList.add('backgroundGrey');
+		form.classList.add('background');
+		form.classList.remove('backgroundGrey');
+
+	}
+</script>
+
+</head>
+<body>
+	<nav class="top_nav">
+		<div class="nav_container">
+			<img src=".\frontresources\fdm.svg" alt="fdm_logo" class="logo">
+			<form class="nav_button_form" action="index.html" method="post">
+				<input class="link" type="submit" name="Questions" value="View Questions">
+        <input class="link"	type="submit" name="Sign up" value="Sign Out">
+			</form>
+		</div>
+	</nav>
+
+	<div class="main_container margin_auto">
+    <nav class="side_nav">
+      <span class="user_name">${username}</span>
+
+      <div class="nav_interactable">
+        <span>Form Repo</span>
+        <input type="submit" name="" value="+ New form" class="button">
+      </div>
+
+      <div class="form_list">
+        <c:forEach items="${#listnamehere}" var="form_item">
+          <span>${form_item}.name</span>
+        </c:forEach>
+      </div>
+    </nav>
+
+
+    <div class="home_container">
+
+			<nav class="displayFlexRow " id="home_nav">
+				<h1 class="alignselfCenter" id="homeNavTitle">Your Form Hub</h1>
+				<div class="displayFlexRow" id="homeNavButtons">
+					<form class="alignselfBottom " action="home.html" method="post">
+						<input type="button" name="formHub" value="Forms" class=" background tabs" id="formTab" onclick="changeTabForm()">
+					</form>
+					<form class="alignselfBottom" action="questions.html" method="post">
+						<input type="button" name="questionHub" value="Questions" class="  backgroundGrey tabs" id="questionTab" onclick="changeTabQuestion()">
+					</form>
+				</div>
+			</nav>
+
+
+        <div class="forms">
+          <p class="form_header">${form_item}.name</p>
+          <p> info</p>
+          <p> info</p>
+          <input type="button" name="button" value="Open form" class="button">
+        </div>
+
+        <div class="forms">
+          <p class="form_header">${form_item}.name</p>
+          <p> info</p>
+          <p> info</p>
+          <input type="button" name="button" value="Open form" class="button">
+        </div>
+
+    </div>
+
+	</div>
+</body>
+</html>

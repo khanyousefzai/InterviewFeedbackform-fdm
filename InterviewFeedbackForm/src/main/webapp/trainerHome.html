@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href=".\frontresources\fdm.png" />
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<link rel="stylesheet" href=".\frontresources\common.css" />
+<link rel="stylesheet" href=".\frontresources\home.css" />
+</head>
+<body>
+	<nav class="top_nav">
+		<div class="nav_container">
+			<img src=".\frontresources\fdm.svg" alt="fdm_logo" class="logo">
+			<form class="nav_button_form" action="index.html" method="post">
+				<input class="link" type="submit" name="Questions"
+					value="Tag Search"> <input class="link" type="submit"
+					name="Sign out" value="Sign Out">
+			</form>
+		</div>
+	</nav>
+
+	<div class="main_container margin_auto">
+		<nav class="side_nav">
+			<span class="user_name">${username}</span>
+
+			<div class="nav_interactable">
+				<span>Form Repo</span> <input type="submit" name=""
+					value="+ New form">
+			</div>
+
+			<div class="form_list">
+				<c:forEach items="${#listnamehere}" var="form_item">
+					<span>${form_item}.name</span>
+				</c:forEach>
+			</div>
+		</nav>
+
+
+		<div class="home_container">
+			<!--  <c:forEach items="${#listnamehere}" var="form_item"> -->
+
+			<div class="forms">
+				<p class="form_header">Question Search</p>
+				<form:form action="/login" method="post" id="login_form"
+					modelAttribute="question">
+					<div class="field_wrapper  ">
+						<!-- <label for="lname" class="field_Label">Interview question</label> -->
+						<form:input path="questionBody" class="field field_full"
+							id="questionListPopup" name="qList" />
+					</div>
+				</form:form>
+				<input type="button" name="button" value="Search">
+			</div>
+
+			<!-- </c:forEach> -->
+		</div>
+
+	</div>
+</body>
+</html>

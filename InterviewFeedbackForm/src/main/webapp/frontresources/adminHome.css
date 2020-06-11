@@ -1,0 +1,144 @@
+@charset "ISO-8859-1";
+#errContainer{
+	margin: auto;
+	margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+	margin-bottom: 5px;
+	text-align: center;
+	display: block;
+}
+
+#errMessage{
+    padding-top: 2px;
+	padding-bottom: 2px;
+    text-align: center;
+    font-size: 15px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    background: #F0A0A0;
+}
+
+#errMessage:empty{
+	display:none;
+}
+
+#succMessage{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 15px;
+	color: green;
+	border: 2px solid green;
+	border-radius: 5px;
+	background: #80ff80;
+}
+
+#succMessage:empty{
+	display:none;
+}
+
+.side_nav{
+  background: white;
+  height: calc(100vh - 100px);
+  width: 325px;
+}
+
+.main_container{
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.user_name{
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  padding: 20px 15px 15px 0;
+  margin: 20px 20px 0 20px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.nav_interactable{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: 75px;
+}
+
+.nav_interactable span{
+  padding-top: 5px;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.home_container{
+  display: flex;
+  flex-flow: column;
+  justify-content:flex-start;
+  width: calc(100% - 325px);
+  height: calc(100vh - 100px);
+  overflow: scroll;
+}
+.home_container::-webkit-scrollbar{
+	display:none;
+}
+
+#home_nav{
+  justify-content: space-between;
+  background:rgb(210, 214, 217);
+  height: 90px;
+  min-width: 600px;
+}
+
+#homeNavButtons{
+  justify-content: space-between;
+  margin-right: 5px;
+}
+
+#homeNavTitle{
+  margin-left: 20px;
+  font-weight: 800;
+  height:45px;
+}
+
+.admin_container{
+	width:60%;
+}
+
+.title{
+	margin: 25px 25px 25px 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid black;
+}
+
+.controlPanel{
+	display: flex;
+	flex-flow:row;
+	justify-content:space-around;
+}
+.option{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	width:30%;
+	height:300px;
+	margin:25px;
+	background: white;
+}
+
+.option_container{
+	margin:25px;
+	padding:25px;
+	background: white;
+}
+
+.buttonspacing{
+	margin: 5px;
+}
+
+.submit{
+	height: 30px;
+	width: 150px;
+	margin: 10px 10px 10px 0;
+}

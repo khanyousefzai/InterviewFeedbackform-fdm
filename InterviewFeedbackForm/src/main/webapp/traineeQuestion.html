@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href=".\frontresources\fdm.png" />
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<link rel="stylesheet" href=".\frontresources\common.css" />
+<link rel="stylesheet" href=".\frontresources\traineeQuestion.css" />
+<script type="text/javascript">
+	function changeTabQuestion(){
+		let form = document.getElementById("formTab");
+		let question = document.getElementById("questionTab");
+
+		form.classList.remove('background');
+		form.classList.add('backgroundGrey');
+
+		question.classList.remove('backgroundGrey');
+		question.classList.add('background');
+	}
+
+	function changeTabForm(){
+		let form = document.getElementById("formTab");
+		let question = document.getElementById("questionTab");
+
+
+		question.classList.remove('background');
+		question.classList.add('backgroundGrey');
+		form.classList.add('background');
+		form.classList.remove('backgroundGrey');
+
+	}
+</script>
+
+</head>
+<body>
+	<nav class="top_nav">
+		<div class="nav_container">
+			<img src=".\frontresources\fdm.svg" alt="fdm_logo" class="logo">
+			<form class="nav_button_form" action="index.html" method="post">
+				<input class="link" type="submit" name="Questions" value="View Questions">
+        <input class="link"	type="submit" name="Sign up" value="Sign Out">
+			</form>
+		</div>
+	</nav>
+
+	<div class="main_container margin_auto">
+    <nav class="side_nav">
+      <span class="user_name">${username}</span>
+
+      <div class="nav_interactable">
+        <span>Form Repo</span>
+        <input type="submit" name="" value="+ New form" class="button">
+      </div>
+
+      <div class="form_list">
+        <c:forEach items="${#listnamehere}" var="form_item">
+          <span>${form_item}.name</span>
+        </c:forEach>
+      </div>
+    </nav>
+
+
+    <div class="home_container">
+
+			<nav class="displayFlexRow " id="home_nav">
+				<h1 class="alignselfCenter" id="homeNavTitle">Question Hub</h1>
+				<div class="displayFlexRow" id="homeNavButtons">
+					<form class="alignselfBottom " action="/formHub" >
+						<input type="button" name="formHub" value="Forms" class=" backgroundGrey tabs" id="formTab" onclick="changeTabForm()">
+					</form>
+					<form class="alignselfBottom" action="/questionHub">
+						<input type="button" name="questionHub" value="Questions" class=" background tabs" id="questionTab" onclick="changeTabQuestion()">
+					</form>
+				</div>
+			</nav>
+
+
+        <div class="margin_auto" id="questionHub">
+					<form:form action="/searchQuestions" method="post" id="searchForm">
+					<div class="displayFlexRow">
+						<div class="displayFlexColumn" id="clientBox">
+							<label for="clientSearch" class="field_Label"> Client </label>
+							<input type="text" name="clientSearch" value="" class="field field_full ui-autocomplete-input" id="clientSearch" autocomplete="off">
+						</div>
+						<div class="displayFlexColumn" id="tagBox">
+							<label for="TagSearch"  class="field_Label"> Tag(s) </label>
+							<input type="text" name="clientSearch" value="" class="field field_full ui-autocomplete-input" id="TagSearch" autocomplete="off">
+						</div>
+						<input type="submit" name="search" value="Search" class="button alignselfBottom searchButton">
+					</div>
+					</form:form>
+
+          <div class="bordered" id="questionContainer">
+						<div class="questionEntryWrapper bordered">
+							<section class="clientEntryWrapper">
+								<span class="clientWrapperLabel">Client(s):</span>
+								<div class="clientTagContainer displayFlexRow">
+									<div class="clientTag bordered" >HSBC</div>
+									<div class="clientTag bordered" >RBC</div>
+								</div>
+							</section>
+							<section class="tagEntryWrapper">
+								<span class="tagWrapperLabel">Tag(s):</span>
+								<div class="tagTagContainer displayFlexRow">
+									<span class="tagTag bordered" >Technical</span>
+									<span class="tagTag bordered" >java</span>
+								</div>
+							</section>
+							<section class="questionEntry">
+								<span class="questionLabel">Question</span>
+								<div class="questionEntryBody">
+									<p class="questionBody"> What is the difference between an array and a list in Java?</p>
+								</div>
+							</section>
+						</div>
+
+						<div class="questionEntryWrapper bordered">
+							<section class="clientEntryWrapper">
+								<span class="clientWrapperLabel">Client(s):</span>
+								<div class="clientTagContainer displayFlexRow">
+									<div class="clientTag bordered" >HSBC</div>
+									<div class="clientTag bordered" >RBC</div>
+								</div>
+							</section>
+							<section class="tagEntryWrapper">
+								<span class="tagWrapperLabel">Tag(s):</span>
+								<div class="tagTagContainer displayFlexRow">
+									<span class="tagTag bordered" >Technical</span>
+									<span class="tagTag bordered" >java</span>
+								</div>
+							</section>
+							<section class="questionEntry">
+								<span class="questionLabel">Question</span>
+								<div class="questionEntryBody">
+									<p class="questionBody"> What is the difference between an array and a list in Java?</p>
+								</div>
+							</section>
+
+          </div>
+        </div>
+
+
+    </div>
+
+	</div>
+</body>
+</html>

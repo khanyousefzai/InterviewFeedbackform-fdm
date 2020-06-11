@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href=".\frontresources\fdm.png" />
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+<link rel="stylesheet" href=".\frontresources\common.css" />
+<link rel="stylesheet" href=".\frontresources\registration.css" />
+
+
+</head>
+<body>
+
+	<nav class="top_nav">
+		<div class="nav_container">
+			<img src=".\frontresources\fdm.svg" alt="fdm_logo" class="logo">
+
+			<form class="nav_button_form" action="index.html" method="post">
+				<input class="link" type="submit" name="Questions"
+					value="View Questions"> <input class="link" type="submit"
+					name="Sign in" value="Sign in"> <input class="link"
+					type="submit" name="Sign up" value="Sign up">
+			</form>
+		</div>
+
+	</nav>
+
+
+	<div class="main_container margin_auto">
+
+		<form class="registration_form margin_auto" action="index.html"
+			method="post">
+			<h1>Create your account</h1>
+
+			<div class="field_wrapper top_item">
+				<label for="fname" class="field_Label">Username </label> <input
+					type="text" class="field single_field" id="fname" name="fname" required>
+			</div>
+
+
+			<div class="grid">
+				<div class="field_wrapper top_item">
+					<label for="fname" class="field_Label">Password </label> <input
+						type="password" class="field" id="password" name="password" required>
+					<span id="message">
+
+
+						<h5>Password must contain the following:</h5>
+						<ul>
+							<li id="letter" class="invalid">A lowercase letter</li>
+							<li id="capital" class="invalid">An uppercase letter</li>
+							<li id="number" class="invalid">A number</li>
+							<li id="length" class="invalid">Minimum 6 characters</li>
+						</ul>
+
+					</span>
+				</div>
+				<div class="field_wrapper top_item">
+					<label for="fname" class="field_Label">Confirm </label> <input
+						type="password" class="field" id="confirm_pw" name="fname" required>
+						<span id="message2">
+					</span>
+				</div>
+
+
+			</div>
+
+			<div class="field_wrapper top_item ">
+				<label for="fname" class="field_Label">Email address </label> <input
+					type="text" class="field single_field" id="fname" name="fname" required>
+			</div>
+
+
+
+			<div class="grid">
+				<div class="field_wrapper top_item">
+					<label for="fname" class="field_Label">First name </label> <input
+						type="text" class="field" id="fname" name="fname" required>
+				</div>
+				<div class="field_wrapper top_item">
+					<label for="fname" class="field_Label">Last name </label> <input
+						type="text" class="field" id="fname" name="fname" required>
+				</div>
+			</div>
+
+			<select class="" name="">
+				<option value="">Sign up as</option>
+				<option value="Trainee">Trainee</option>
+				<option value="Trainer">Trainer</option>
+			</select> <input type="submit" name="Register" value="Register" id="signup"
+				class="single_field margin_auto">
+		</form>
+	</div>
+	<script type="text/javascript" src=".\frontresources\script.js"></script>
+	<script type="text/javascript" src=".\frontresources\passwordValidaton.js"></script>
+</body>
+</html>
